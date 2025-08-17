@@ -1,16 +1,14 @@
 {
   "name": "stp",
   "private": true,
-  "version": "0.1.0",
+  "version": "0.1.1",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "version": "echo $npm_package_version > src/version.txt",
-    "postversion": "git push --follow-tags",
-    "version": "node ./scripts/update-version.ts",
+    "version": "node scripts/update-version.js",
     "postversion": "git push --follow-tags && git push origin HEAD"
   },
   "config": {

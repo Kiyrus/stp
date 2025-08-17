@@ -8,8 +8,8 @@ const __dirname = path.dirname(__filename);
 const newVersion = process.env.npm_package_version;
 
 const targetFiles = [
-	'src/version.ts',
-	'public/manifest.json'
+	'src/version.js',
+	'package.json'
 ];
 
 (async () => {

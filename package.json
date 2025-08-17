@@ -1,13 +1,20 @@
 {
   "name": "stp",
   "private": true,
-  "version": "0.0.0",
+  "version": "0.1.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "version": "echo $npm_package_version > src/version.txt",
+    "postversion": "git push --follow-tags",
+    "version": "node ./scripts/update-version.ts",
+    "postversion": "git push --follow-tags && git push origin HEAD"
+  },
+  "config": {
+    "commitMessage": "Bump version to"
   },
   "dependencies": {
     "@radix-ui/react-slot": "^1.2.3",

@@ -8,7 +8,7 @@ const __dirname = path.dirname(__filename);
 const newVersion = process.env.npm_package_version;
 
 const targetFiles = [
-	'src/version.js',
+	'src/types/version.ts',
 	'package.json'
 ];
 

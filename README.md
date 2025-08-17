@@ -1,3 +1,62 @@
+# 📅 "Умный Планировщик Задач с Аналитикой" (Smart Task Planner)
+
+### 🗂️ Структура проекта
+```plaintext
+src/
+├── assets/                 # 📁 Статические ресурсы
+│   ├── fonts/              #    └─ Шрифты
+│   └── images/             #    └─ Изображения
+│
+├── components/             # 📁 Компоненты с типами
+│   ├── ui/                 #    ├─ Базовые UI-компоненты
+│   │   ├── Button.tsx
+│   │   ├── Input.tsx
+│   │   └── Modal.tsx
+│   │
+│   ├── layout/             #    ├─ Компоненты макета
+│   │   ├── Header.tsx
+│   │   ├── Sidebar.tsx
+│   │   └── TaskGrid.tsx
+│   │
+│   └── features/           #    └─ Фиче-компоненты
+│       ├── TaskItem.tsx
+│       ├── ProgressBar.tsx
+│       └── Notification.tsx
+│
+├── contexts/               # 📁 Типизированные контексты
+│   ├── ThemeContext.tsx    #    ├─ Контекст темы
+│   ├── TasksContext.tsx    #    ├─ Контекст задач
+│   └── HistoryContext.tsx  #    └─ Контекст истории
+│
+├── hooks/                  # 📁 Кастомные хуки
+│   ├── useLocalStorage.ts  #    ├─ Работа с localStorage
+│   ├── useTimer.ts         #    ├─ Таймер
+│   ├── useTaskAnalytics.ts #    ├─ Аналитика задач
+│   └── useDebounce.ts      #    └─ Дебаунс-логика
+│
+├── pages/                  # 📁 Страницы приложения
+│   ├── Dashboard.tsx       #    ├─ Главная страница
+│   ├── Analytics.tsx       #    ├─ Аналитика
+│   └── Settings.tsx        #    └─ Настройки
+│
+├── services/               # 📁 Сервисы
+│   ├── taskService.ts      #    ├─ Логика задач
+│   └── api.ts              #    └─ API-клиент
+│
+├── types/                  # 📁 Централизованные типы
+│   ├── task.d.ts           #    ├─ Типы задач
+│   ├── context.d.ts        #    ├─ Типы контекстов
+│   ├── hooks.d.ts          #    ├─ Типы хуков
+│   └── index.ts            #    └─ Баррель-экспорт
+│
+├── utils/                  # 📁 Вспомогательные утилиты
+│   ├── helpers.ts          #    ├─ Функции-помощники
+│   └── constants.ts        #    └─ Константы
+│
+├── App.tsx                 # ⚛️ Главный компонент
+├── index.tsx               # ⚡ Точка входа
+└── vite-env.d.ts           # 🌐 Типы окружения (Vite)
+
 # React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
@@ -67,58 +126,3 @@ export default tseslint.config([
   },
 ])
 ```
-# Структура проекта
-src/
-├── assets/ # Статические ресурсы
-│ ├── fonts/ # Шрифты
-│ └── images/ # Изображения
-│
-├── components/ # Компоненты с типами
-│ ├── ui/ # Базовые UI-компоненты
-│ │ ├── Button.tsx
-│ │ ├── Input.tsx
-│ │ └── Modal.tsx
-│ │
-│ ├── layout/ # Компоненты макета
-│ │ ├── Header.tsx
-│ │ ├── Sidebar.tsx
-│ │ └── TaskGrid.tsx
-│ │
-│ └── features/ # Фиче-компоненты
-│ ├── TaskItem.tsx
-│ ├── ProgressBar.tsx
-│ └── Notification.tsx
-│
-├── contexts/ # Типизированные контексты
-│ ├── ThemeContext.tsx # Контекст темы
-│ ├── TasksContext.tsx # Контекст задач
-│ └── HistoryContext.tsx # Контекст истории
-│
-├── hooks/ # Типизированные кастомные хуки
-│ ├── useLocalStorage.ts # Хук для localStorage
-│ ├── useTimer.ts # Таймер
-│ ├── useTaskAnalytics.ts # Аналитика задач
-│ └── useDebounce.ts # Дебаунс-логика
-│
-├── pages/ # Страницы приложения
-│ ├── Dashboard.tsx # Главная страница
-│ ├── Analytics.tsx # Аналитика
-│ └── Settings.tsx # Настройки
-│
-├── services/ # Сервисы с типами
-│ ├── taskService.ts # Логика работы с задачами
-│ └── api.ts # API-клиент
-│
-├── types/ # Централизованные типы
-│ ├── task.d.ts # Типы задач
-│ ├── context.d.ts # Типы контекстов
-│ ├── hooks.d.ts # Типы хуков
-│ └── index.ts # Баррель для экспорта типов
-│
-├── utils/ # Утилиты с типами
-│ ├── helpers.ts # Вспомогательные функции
-│ └── constants.ts # Константы приложения
-│
-├── App.tsx # Главный компонент приложения
-├── index.tsx # Точка входа
-└── vite-env.d.ts # Типы окружения (Vite)

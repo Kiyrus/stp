@@ -12,19 +12,21 @@ import RegisterPage from "@/pages/RegisterPage.tsx";
 
 function App() {
   return (
-      <Routes>
-        <Route element={<MainLayout/>}>
-          <Route path="/" element={<Dashboard/>}/>
-          <Route path="/analytics" element={<Analytics/>}/>
-          <Route path="/settings" element={<Settings/>}/>
-          <Route path="*" element={<NotFoundPage/>}/>
-        </Route>
+      <div className={'app-container'}>
+        <Routes>
+          <Route element={<MainLayout/>}>
+            <Route path="/" element={<Dashboard/>}/>
+            <Route path="/analytics" element={<Analytics/>}/>
+            <Route path="/settings" element={<Settings/>}/>
+            <Route path="*" element={<NotFoundPage/>}/>
+          </Route>
 
-        <Route element={<AuthLayout/>}>
-          <Route path="/login" element={<LoginPage/>}/>
-          <Route path="/register" element={<RegisterPage/>}/>
-        </Route>
-      </Routes>
+          <Route element={<AuthLayout/>}>
+            <Route path="/login" element={<LoginPage/>}/>
+            <Route path="/register" element={<RegisterPage/>}/>
+          </Route>
+        </Routes>
+      </div>
   );
 }
 

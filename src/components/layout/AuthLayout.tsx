@@ -1,22 +1,25 @@
 import { Outlet } from 'react-router-dom';
 import Header from './Header';
 import Footer from './Footer';
-import Sidebar from "@/components/layout/Sidebar.tsx";
-import {ModeToggle} from "@/components/layout/mode-toggle.tsx";
+import { SidebarProvider, SidebarInset } from "@/components/ui/sidebar";
+import AppSidebar from "@/components/layout/AppSidebar.tsx";
 
 const AuthLayout = () => {
 	return (
-			<div className="app-container">
-				<ModeToggle/>
-				<Header/>
-				<div className="content-wrapper">
-					<Sidebar/>
-					<main className="main-content">
-						<Outlet/>
-					</main>
+			<SidebarProvider className="app-container">
+				<AppSidebar/>
+				<div  className="m-[10px] w-screen">
+					<Header/>
+					<div>
+						<SidebarInset>
+							<main>
+								<Outlet/>
+							</main>
+						</SidebarInset>
+					</div>
+					<Footer/>
 				</div>
-				<Footer/>
-			</div>
+			</SidebarProvider>
 	);
 };
 

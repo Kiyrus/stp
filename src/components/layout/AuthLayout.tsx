@@ -6,9 +6,9 @@ import AppSidebar from "@/components/layout/AppSidebar.tsx";
 
 const AuthLayout = () => {
 	return (
-			<SidebarProvider className="app-container">
+			<SidebarProvider>
 				<AppSidebar/>
-				<div  className="m-[10px] w-screen">
+				<div  className="app-container">
 					<Header/>
 					<div>
 						<SidebarInset>
